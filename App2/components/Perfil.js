@@ -1,6 +1,6 @@
 /* 1. ZONA DE IMPORTACIONES */
 import { useState } from 'react';
-import { Text, View, StyleSheet, Button } from 'react-native';
+import { Text, View, Button } from 'react-native';
 
 
 export const Perfil = ({nombre,carrera,materia,cuatri}) => {
