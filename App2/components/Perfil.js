@@ -7,7 +7,7 @@ export const Perfil = ({ nombre, carrera, materia, cuatri, color = 'white' }) =>
   return (
     <View style={[estilos.tarjeta, { backgroundColor: color }]}>
       <Text style={estilos.nombres}>{nombre}</Text>
-      
+
       {mostrar && (
         <>
           <Text style={estilos.carrera}>{carrera}</Text>
@@ -15,7 +15,7 @@ export const Perfil = ({ nombre, carrera, materia, cuatri, color = 'white' }) =>
           <Text style={estilos.otroTexto}>{cuatri}</Text>
         </>
       )}
-      
+
       <Button title="ver perfil" onPress={() => setmostrar(!mostrar)} />
     </View>
   );
@@ -24,28 +24,11 @@ export const Perfil = ({ nombre, carrera, materia, cuatri, color = 'white' }) =>
 const estilos = StyleSheet.create({
   nombres: {
     fontSize: 24,
-    fontWeight: 800, // Nota: fontWeight en React Native suele usar strings como 'bold' o '800'
+    fontWeight: '800', // <-- Se corrigió agregando las comillas
     textTransform: 'uppercase',
   },
   carrera: {
     fontSize: 20,
-    fontFamily: 'Roboto',
-    color: 'blue',
-
   },
-  otroTexto: {
-    fontSize: 18,
-    fontFamily: 'courier',
-    color: 'red',
-    fontStyle: 'italic',
-  },
-
-  tarjeta: {
-    borderWidth: 4,
-    borderRadius: 12,
-    padding: 15,
-    margin: 10,
-    backgroundColor: 'red',
-  },
-
+  // ... resta de estilos
 });
