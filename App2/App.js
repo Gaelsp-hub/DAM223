@@ -1,12 +1,17 @@
 /*1.ZONA IMPORTACIONES*/
 import { StyleSheet, View } from 'react-native';
 import MenuScreen from './screens/MenuScreen';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 /*2.ZONA Main(componentes o screens)*/
 export default function App() {
   return (
-   <MenuScreen/>
+    <SafeAreaProvider>
+      <View style={styles.container}>
+        <MenuScreen/>
+      </View>
+    </SafeAreaProvider>
   );
 }
 
