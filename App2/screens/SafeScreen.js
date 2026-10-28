@@ -1,38 +1,31 @@
-/*1.ZONA IMPORTACIONES*/
+import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import SafeAreaEjemplo from '../screensSafeAreaEjemplo';
-import ScrollViewEjemplo from '../screensSafeAreaEjemplo';
+// Asegúrate de incluir la 's' al final
+import SafeAreaEjemplo from './SafeAreaEjemplos';
+import ScrollViewEjemplo from './ScrollViewEjemplo';
 
-/*2.ZONA Main(componentes o screens)*/
 export default function SafeScreen() {
   return (
     <View style={styles.container}>
-      
-    <Text>Aquí va la practica 10</Text>
-    <SafeAreaEjemplo>
-
-    </SafeAreaEjemplo>
-    <ScrollViewEjemplo>
-
-    </ScrollViewEjemplo>
+      <Text style={styles.tituloPrincipal}>Aquí va la práctica 10</Text>
+      <SafeAreaEjemplo />
+      <ScrollViewEjemplo />
     </View>
   );
 }
 
-/*3.ZONA estilos */
 const styles = StyleSheet.create({
   container: {
- flex: 1,
-    backgroundColor: '#fff',
-    flexDirection: 'row',
+    flex: 1,
+    backgroundColor: '#ffffff',
     alignItems: 'center',
-    justifyContent: 'space-evenly', // <--- Espaciado idéntico
+    justifyContent: 'center',
+    padding: 20,
   },
-  tituloPrincipal:{
-    fontSize: 24,
+  tituloPrincipal: {
+    fontSize: 22,
     fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 15,
-  }
+  },
 });
