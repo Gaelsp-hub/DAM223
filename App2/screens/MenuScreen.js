@@ -6,6 +6,7 @@ import { useState } from 'react';
 import SafeScreen from './SafeScreen';
 import PressableScreen from './PressableScreen';
 import TarjetasScreen from './TarjetasScreen';
+import TextinputScreen from './TextinputScreen';
 
 /*2.ZONA Main(componentes o screens)*/
 export default function MenuScreen() {
@@ -18,6 +19,8 @@ export default function MenuScreen() {
             return <PressableScreen/>;
         case 'Tarjetas':
             return <TarjetasScreen/>;
+        case 'imputscreen':
+            return <TextinputScreen/>;
         default:  
             return (
                 <View style={styles.container}>
@@ -25,6 +28,7 @@ export default function MenuScreen() {
                     <Button title="Práctica de Tarjetas" onPress={() => setScreen('Tarjetas')} />
                     <Button title="Práctica de SafeAreaView" onPress={() => setScreen('Safe')} />
                     <Button title="Práctica de Pressable" onPress={() => setScreen('press')} />
+                    <Button title="Práctica de Textimput" onPress={() => setScreen('imputscreen')} />
                 </View>   
             ); 
     }
