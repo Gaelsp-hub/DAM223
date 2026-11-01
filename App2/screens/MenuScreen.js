@@ -24,7 +24,7 @@ export default function MenuScreen() {
         default:  
             return (
                 <View style={styles.container}>
-                    <Text>Menú de prácticas</Text>
+                    <Text style={styles.titulo}>Menú de prácticas</Text>
                     <Button title="Práctica de Tarjetas" onPress={() => setScreen('Tarjetas')} />
                     <Button title="Práctica de SafeAreaView" onPress={() => setScreen('Safe')} />
                     <Button title="Práctica de Pressable" onPress={() => setScreen('press')} />
@@ -44,4 +44,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         gap: 15,
     },
+    titulo: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginBottom: 20,
+    }
 });
