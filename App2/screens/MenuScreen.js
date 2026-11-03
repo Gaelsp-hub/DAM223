@@ -7,6 +7,7 @@ import SafeScreen from './SafeScreen';
 import PressableScreen from './PressableScreen';
 import TarjetasScreen from './TarjetasScreen';
 import TextinputScreen from './TextinputScreen';
+import ListasScreen from './ListasScreen';
 
 /*2.ZONA Main(componentes o screens)*/
 export default function MenuScreen() {
@@ -21,6 +22,8 @@ export default function MenuScreen() {
             return <TarjetasScreen/>;
         case 'imputscreen':
             return <TextinputScreen/>;
+        case 'Listas':
+            return <ListasScreen/>;
         default:  
             return (
                 <View style={styles.container}>
@@ -29,6 +32,7 @@ export default function MenuScreen() {
                     <Button title="Práctica de SafeAreaView" onPress={() => setScreen('Safe')} />
                     <Button title="Práctica de Pressable" onPress={() => setScreen('press')} />
                     <Button title="Práctica de Textimput" onPress={() => setScreen('imputscreen')} />
+                    <Button title="Práctica de Listas" onPress={() => setScreen('Listas')} />
                 </View>   
             ); 
     }
