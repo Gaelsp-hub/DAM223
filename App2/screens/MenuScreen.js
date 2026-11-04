@@ -8,6 +8,7 @@ import PressableScreen from './PressableScreen';
 import TarjetasScreen from './TarjetasScreen';
 import TextinputScreen from './TextinputScreen';
 import ListasScreen from './ListasScreen';
+import FlatSectionScreens from './flatSectionScreens';
 
 /*2.ZONA Main(componentes o screens)*/
 export default function MenuScreen() {
@@ -24,6 +25,8 @@ export default function MenuScreen() {
             return <TextinputScreen/>;
         case 'Listas':
             return <ListasScreen/>;
+        case 'FlatList':
+            return <FlatSectionScreens/>;
         default:  
             return (
                 <View style={styles.container}>
@@ -33,6 +36,7 @@ export default function MenuScreen() {
                     <Button title="Práctica de Pressable" onPress={() => setScreen('press')} />
                     <Button title="Práctica de Textimput" onPress={() => setScreen('imputscreen')} />
                     <Button title="Práctica de Listas" onPress={() => setScreen('Listas')} />
+                    <Button title="Práctica de FlatList y SectionList" onPress={() => setScreen('FlatList')} />
                 </View>   
             ); 
     }
