@@ -10,6 +10,7 @@ import TextinputScreen from './TextinputScreen';
 import ListasScreen from './ListasScreen';
 import FlatSectionScreens from './flatSectionScreens';
 import ImageBackgroundScreen from './ImageBackgroundScreen';
+import ActivityScreen from './ActivityScreen';
 
 /*2.ZONA Main(componentes o screens)*/
 export default function MenuScreen() {
@@ -28,8 +29,10 @@ export default function MenuScreen() {
             return <ListasScreen/>;
         case 'FlatList':
             return <FlatSectionScreens/>;
-            case 'ImageBackground':
-                return <ImageBackgroundScreen/>;
+        case 'ImageBackground':
+            return <ImageBackgroundScreen/>;
+        case 'Activity':
+            return <ActivityScreen/>;
         default:  
             return (
                 <View style={styles.container}>
@@ -41,6 +44,7 @@ export default function MenuScreen() {
                     <Button title="Práctica de Listas" onPress={() => setScreen('Listas')} />
                     <Button title="Práctica de FlatList y SectionList" onPress={() => setScreen('FlatList')} />
                     <Button title="Práctica de ImageBackground" onPress={() => setScreen('ImageBackground')} />
+                    <Button title="Práctica de ActivityIndicator" onPress={() => setScreen('Activity')} />
                 </View>   
             ); 
     }
