@@ -11,6 +11,7 @@ import ListasScreen from './ListasScreen';
 import FlatSectionScreens from './flatSectionScreens';
 import ImageBackgroundScreen from './ImageBackgroundScreen';
 import ActivityScreen from './ActivityScreen';
+import ModalBottomScreen from './ModalButtomScreen';
 
 /*2.ZONA Main(componentes o screens)*/
 export default function MenuScreen() {
@@ -33,6 +34,8 @@ export default function MenuScreen() {
             return <ImageBackgroundScreen/>;
         case 'Activity':
             return <ActivityScreen/>;
+        case 'modal':
+            return <ModalBottomScreen/>;    
         default:  
             return (
                 <View style={styles.container}>
@@ -45,6 +48,7 @@ export default function MenuScreen() {
                     <Button title="Práctica de FlatList y SectionList" onPress={() => setScreen('FlatList')} />
                     <Button title="Práctica de ImageBackground" onPress={() => setScreen('ImageBackground')} />
                     <Button title="Práctica de ActivityIndicator" onPress={() => setScreen('Activity')} />
+                    <Button title="Práctica de Modal" onPress={() => setScreen('modal')} />
                 </View>   
             ); 
     }
